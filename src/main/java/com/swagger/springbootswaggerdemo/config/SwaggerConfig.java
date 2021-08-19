@@ -9,7 +9,10 @@ import springfox.documentation.service.ApiInfo;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
-
+/**
+ *项目启动后访问 http://localhost:8080/swagger-ui.html 就可以看到接口文档了
+ *
+ */
 @Configuration
 @EnableSwagger2
 public class SwaggerConfig {
@@ -21,6 +24,7 @@ public class SwaggerConfig {
                 .apis(RequestHandlerSelectors.any())
                 .paths(PathSelectors.any()).build();
     }
+
 
     private ApiInfo apiInfo(){
         return new ApiInfoBuilder()
